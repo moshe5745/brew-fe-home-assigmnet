@@ -1,6 +1,6 @@
 <script>
     import { useNavigate, useLocation } from "svelte-navigator";
-    import { user } from "../stores/user";
+    import { user } from "../../stores/user";
   
     const navigate = useNavigate();
     const location = useLocation();
@@ -10,7 +10,7 @@
   
     function handleSubmit() {
       $user = { username, password };
-      const from = ($location.state && $location.state.from) || "/";
+      const from = ($location.state && $location.state.from) || "/home";
       navigate(from, { replace: true });
     }
   </script>
