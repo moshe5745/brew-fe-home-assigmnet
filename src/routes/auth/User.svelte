@@ -10,7 +10,6 @@
 <style>
     .container {
         display: flex;
-        margin-inline-end: 40px;
     }
     .avatar {
         margin: auto;

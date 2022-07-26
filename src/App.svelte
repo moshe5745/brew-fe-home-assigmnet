@@ -8,3 +8,14 @@
     <Home />
   </main>
 </Router>
+
+<style>
+  :global(#app) {
+    width: 100%;
+    margin: unset;
+    padding: unset;
+    max-width: unset;
+  }
+  
+  
+</style>

@@ -42,18 +42,14 @@
 
 <style>
     header {
-        position: absolute;
-        top: 0px;
-        left: 0;
         margin: 20px;
         display: flex;
         justify-content: space-between;
-        width: 100%;
         align-items: center;
     }
 
     main {
-        width: 100%;
-        height: 100%;
+        margin: 0 20px;
+        height: 100vh;
     }
 </style>

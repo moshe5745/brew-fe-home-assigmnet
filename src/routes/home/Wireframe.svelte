@@ -1,26 +1,20 @@
 <script lang="ts">
-  import type { IData,IDataContext } from "src/models/data";
-  import { onMount,setContext } from "svelte";
-
-  let allData: IData;
-
-  onMount(async () => {
-    const { json } = await fetch("/getAllData");
-    allData = await json();
-
-    setContext("data", {
-      allData: json,
-    } as IDataContext);
-  });
+  import TopBar from "./lib/TopBar.svelte";
+  import { menuOpt, userSelections } from "../../stores/top_bar";
+import ListData from "./lib/ListData.svelte";
+import Graph from "./lib/Graph.svelte";
 </script>
 
-<div class="container">
-  <h1>Wireframe</h1>
+<TopBar menuOpt={$menuOpt} userSelections={$userSelections} />
+<div class="data-section">
+  <ListData />
+  <Graph />
 </div>
 
 <style>
-  .container {
-    width: 100vh;
-    height: 100vh;
+  .data-section {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
   }
 </style>
