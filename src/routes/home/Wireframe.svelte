@@ -6,6 +6,8 @@
 
   onMount(async () => {
     const { json } = await fetch("/getAllData");
+    allData = await json();
+
     setContext("data", {
       allData: json,
     } as IDataContext);
